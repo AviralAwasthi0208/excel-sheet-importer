@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import toast from "react-hot-toast";
 
-const API_URL = import.meta.env.NODE_ENV ==="development" ? "http://localhost:4000/api/v1/excelFileUpdate"  : " /api/v1/excelFileUpdate"
+const API_URL = process.env.MODE ==="development" ? "http://localhost:4000/api/v1/excelFileUpdate"  : " /api/v1/excelFileUpdate"
 
 
 export default function ExcelTable({ data }) {
