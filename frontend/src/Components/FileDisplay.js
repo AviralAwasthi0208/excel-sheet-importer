@@ -10,6 +10,9 @@ import {
 } from "lucide-react";
 import toast from "react-hot-toast";
 
+const API_URL = import.meta.env.MODE ==="development" ? "http://localhost:4000/api/v1/excelFileUpdate"  : " /api/v1/excelFileUpdate"
+
+
 export default function ExcelTable({ data }) {
   const [sheetData, setSheetData] = useState([]);
   const [modifiedData, setModifiedData] = useState([]);
@@ -61,7 +64,7 @@ export default function ExcelTable({ data }) {
   const handleImport = async () => {
     try {
       const response = await fetch(
-        "http://localhost:4000/api/v1/excelFileUpdate",
+        `${API_URL}`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
