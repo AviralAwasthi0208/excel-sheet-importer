@@ -5,7 +5,7 @@ import { Upload, X } from "lucide-react"
 import toast, { Toaster } from "react-hot-toast"
 import FileData from "../Components/FileData"
 
-const API_URL = import.meta.env.MODE ==="development" ? "http://localhost:4000/api/v1/excelFileUpload"  : " /api/v1/excelFileUpload"
+const API_URL = import.meta.env.NODE_ENV ==="development" ? "http://localhost:4000/api/v1/excelFileUpload"  : " /api/v1/excelFileUpload"
 
 // Helper function to parse error strings from the server
 function parseErrorString(errorString) {
